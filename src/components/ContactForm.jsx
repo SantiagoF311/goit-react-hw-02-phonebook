@@ -90,10 +90,21 @@ ContactForm.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired
     })
   ).isRequired,
   onChangeName: PropTypes.func.isRequired,
   onChangeNumber: PropTypes.func.isRequired,
+  onChangeFilter: PropTypes.func.isRequired,
+  filteredContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  filter: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
   onAddContact: PropTypes.func.isRequired
 };
